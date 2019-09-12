@@ -11,6 +11,7 @@ app.get('/', (req, res) => {
   res.send(`
     <link rel="stylesheet" href="/css/style.css">
     <h1>Joel Spinelli</h1>
+    <p>Welcome to my site</p>
   `);
 });
 
