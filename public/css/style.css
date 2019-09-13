@@ -11,17 +11,20 @@
 .cabecalho__titulo {
   font-size: 2rem;
   text-align: center;
+  letter-spacing: .2rem;
   color: white;
   margin: 0;
-  padding: 1rem 0 .5rem 0; 
+  padding: 1rem 0 .5rem 0;
 }
 
 .cabecalho__subtitulo {
   font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: .05rem;
   text-align: center;
   color: white;
   margin: 0 auto;
-  padding: 1rem 0 .5rem 
+  padding: 1rem 0 .5rem;
 }
 
 .redesSociais {
