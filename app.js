@@ -7,12 +7,16 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
+app.get('/', (req, res, next) => {
   res.send(`
     <link rel="stylesheet" href="/css/style.css">
     <h1>Joel Spinelli</h1>
     <p>Welcome to my site</p>
   `);
 });
+
+app.use((req, res, next) => {
+  res.redirect('/');
+})
 
 app.listen(port);
