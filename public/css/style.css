@@ -8,6 +8,8 @@
   overflow: auto;
 }
 
+.cabecalho__imagem { display: none; }
+
 .cabecalho__titulo {
   font-size: 2rem;
   text-align: center;
@@ -54,4 +56,15 @@
   padding: 3rem 1rem 1rem 1rem;
   line-height: 1.8rem;
   color: #707070;
+}
+
+@media (min-width: 768px) {
+  .cabecalho__titulo {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .cabecalho__subtitulo {
+    font-size: 1.5rem;
+  }
 }
