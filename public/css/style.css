@@ -1,57 +1,45 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-}
-
-.cabecalho {
-  background-color: #1F203E;
-  overflow: auto;
+  background-color: #000d70;
+  color: #4D61FF;
+  text-align: center;
 }
 
 .cabecalho__titulo {
-  font-size: 2rem;
-  text-align: center;
-  letter-spacing: .2rem;
-  color: white;
-  margin: 0;
-  padding: 1rem 0 .5rem 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3em;
+  margin: 1em 0;
+  color: #fff;
+  animation: neon1 1.5s ease-in-out infinite alternate;
 }
 
-.cabecalho__subtitulo {
-  font-size: 1rem;
-  font-weight: normal;
-  letter-spacing: .05rem;
-  text-align: center;
-  color: white;
-  margin: 0 auto;
-  padding: 1rem 0 .5rem;
+h2 {
+  font-size: 1em;
+  margin-bottom: 2em;
 }
 
-.redesSociais {
-  margin: 1rem;
-  display: flex;
-  border: .1rem solid white;
-  border-radius: .3rem;
-}
-
-.redesSociais__links {
-  width: 33.33%;
-  text-align: center;
-  padding: .2rem 0;
-}
-
-.redesSociais__links a{
-  text-decoration: none;
-  color: white;
-}
-
-.redesSociais__links:nth-child(2) {
-  border-left: .1rem solid white;
-  border-right: .1rem solid white;
-}
-
-.apresentacao {
-  padding: 3rem 1rem 1rem 1rem;
-  line-height: 1.8rem;
-  color: #707070;
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow:
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #001EFF,
+      0 0 70px #001EFF,
+      0 0 80px #001EFF,
+      0 0 100px #001EFF,
+      0 0 150px #001EFF;
+  }
+  to {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #fff,
+      0 0 20px #001EFF,
+      0 0 35px #001EFF,
+      0 0 40px #001EFF,
+      0 0 50px #001EFF,
+      0 0 75px #001EFF;
+  }
 }
