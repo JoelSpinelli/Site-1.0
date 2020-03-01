@@ -1,20 +1,21 @@
-* {
+body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #d1def0;
   margin: 0;
 }
 
 .cabecalho {
-  background-color: #1F203E;
   overflow: auto;
 }
 
 .cabecalho__titulo {
-  font-size: 2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2.5rem;
   text-align: center;
   letter-spacing: .2rem;
-  color: white;
+  color: #3246d3;
   margin: 0;
-  padding: 1rem 0 .5rem 0;
+  padding: 1rem 0 1rem 0;
 }
 
 .cabecalho__subtitulo {
@@ -22,7 +23,7 @@
   font-weight: normal;
   letter-spacing: .05rem;
   text-align: center;
-  color: white;
+  color: #3246d3;
   margin: 0 auto;
   padding: 1rem 0 .5rem;
 }
@@ -30,28 +31,40 @@
 .redesSociais {
   margin: 1rem;
   display: flex;
-  border: .1rem solid white;
+  border: .05rem solid #3246d3;
   border-radius: .3rem;
 }
 
 .redesSociais__links {
   width: 33.33%;
   text-align: center;
+  line-height: 1.5em;
   padding: .2rem 0;
 }
 
-.redesSociais__links a{
+.redesSociais__links{
   text-decoration: none;
-  color: white;
+  color: #3246d3;
 }
 
 .redesSociais__links:nth-child(2) {
-  border-left: .1rem solid white;
-  border-right: .1rem solid white;
+  border-left: .05rem solid #3246d3;
+  border-right: .05rem solid #3246d3;
 }
 
 .apresentacao {
-  padding: 3rem 1rem 1rem 1rem;
-  line-height: 1.8rem;
-  color: #707070;
+  margin: 1em;
+  background-color: #FFFFFF;
+  border-radius: 1em;
+  padding: 1rem;
+  height: 100%;
+  line-height: 2rem;
+  color: #3246d3;
+}
+
+@media(min-width: 960px) {
+  .container {
+    width: 960px;
+    margin: 0 auto;
+  }
 }

@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 
-const port = process.env.PORT_APP || 3001;
+const port = process.env.PORT_APP || 3000;
 
 const app = express();
 
@@ -17,4 +17,5 @@ app.use((req, res, next) => {
   res.redirect('/');
 });
 
+console.log(`listening port ${port}`);
 app.listen(port);
