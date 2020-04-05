@@ -1,12 +1,16 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: .1em;
-  background-color: #d1def0;
+  background-color: #ffffff;
   margin: 0;
 }
 
+.container {
+  margin: 1rem;
+}
+
 .cabecalho {
-  overflow: auto;
+  margin-top: 1.5rem;
 }
 
 .cabecalho__titulo {
@@ -21,44 +25,39 @@ body {
 
 .cabecalho__subtitulo {
   font-size: 1.2rem;
-  font-weight: normal;
+  font-weight: italic;
+  font-style: italic;
   letter-spacing: .05rem;
   text-align: center;
   color: #3246d3;
   margin: 0 auto;
   padding: 1rem 0 .5rem;
 }
-
-.redesSociais {
-  margin: 1rem;
+.redesSociais{
+  margin: 2rem 0;
+  border-radius: 0;
+}
+ .redesSociais ul {
+  width: 100%;
   display: flex;
-  border: .05rem solid #3246d3;
-  border-radius: .3rem;
+  justify-content: space-between;
 }
-
-.redesSociais__links {
-  width: 33.33%;
-  text-align: center;
-  line-height: 1.5em;
-  padding: .2rem 0;
+.redesSociais ul li {
+  margin-bottom: 0.5rem;
 }
-
-.redesSociais__links {
+.redesSociais ul li a {
   text-decoration: none;
   color: #3246d3;
+  padding: .5rem 2rem;
+  border: 2px solid #3246d3;
+  border-radius: .3rem;
 }
-
-.redesSociais__links:nth-child(2) {
-  border-left: .05rem solid #3246d3;
-  border-right: .05rem solid #3246d3;
+.redesSociais ul li a:hover {
+  background-color: #3246d3;
+  color: #ffffff;
 }
 
 .apresentacao {
-  margin: 1rem;
-  background-color: #f7faff;
-  border-radius: 1em;
-  padding: 1rem;
-  height: 100%;
   line-height: 2rem;
   color: #3246d3;
 }
@@ -69,7 +68,11 @@ body {
     margin: 0 auto;
   }
   .cabecalho {
+    display: flex;
     margin-top: 5rem;
+  }
+  header {
+    flex-grow: 1;
   }
   .cabecalho__titulo {
     font-size: 5rem;
@@ -80,26 +83,26 @@ body {
   }
   .redesSociais {
     border: none;
-    border-radius: 0;
+    margin: 0;
   }
-  .redesSociais__links {
-    width: 25%;
-    border: 1px solid #3246d3;
-    border-radius: .3rem;
+  .redesSociais ul {
+    display: block;
+    width: 100%;
   }
-  .redesSociais__links:nth-child(2) {
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+  .redesSociais ul li {
+    width: auto;
+    border: none;
+    margin-bottom: 0.5rem;
   }
-  .redesSociais__links:hover {
-    text-decoration: underline;
+  .redesSociais ul li a {
+    width: auto;
+    display: block;
+    border: 2px solid #3246d3;
+    margin: 0;
   }
+
   .apresentacao {
     font-size: 1.3em;
     line-height: 2.1em;
-    padding: 2em
-  }
-  .apresentacao p:nth-child(2) {
-    margin-top: 1rem;
   }
 }
