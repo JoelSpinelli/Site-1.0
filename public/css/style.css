@@ -9,7 +9,7 @@ body {
 
 .cabecalho-titulo {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 4em;
+  font-size: 3em;
   text-align: center;
   letter-spacing: .2rem;
   margin-bottom: .25em;
@@ -26,4 +26,11 @@ body {
 .social-lista {
   display: flex;
   justify-content: space-between;
+}
+
+@media(min-width: 960px) {
+  .container {
+    width: 960px;
+    margin: 0 auto;
+  }
 }
