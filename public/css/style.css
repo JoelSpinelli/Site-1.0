@@ -2,107 +2,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: .1em;
   background-color: #ffffff;
-  margin: 0;
 }
-
 .container {
-  margin: 1rem;
+  margin: 1em;
 }
 
-.cabecalho {
-  margin-top: 1.5rem;
-}
-
-.cabecalho__titulo {
+.cabecalho-titulo {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 3rem;
+  font-size: 4em;
   text-align: center;
   letter-spacing: .2rem;
-  color: #3246d3;
-  margin: 0;
-  padding: 1rem 0 1rem 0;
+  margin-bottom: .25em;
 }
 
-.cabecalho__subtitulo {
-  font-size: 1.2rem;
-  font-weight: italic;
+.cabecalho-subtitulo {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
-  letter-spacing: .05rem;
+  font-size: .75em;
   text-align: center;
-  color: #3246d3;
-  margin: 0 auto;
-  padding: 1rem 0 .5rem;
+  margin-bottom: 2em;
 }
-.redesSociais{
-  margin: 2rem 0;
-  border-radius: 0;
-}
- .redesSociais ul {
-  width: 100%;
+
+.social-lista {
   display: flex;
   justify-content: space-between;
-}
-.redesSociais ul li {
-  margin-bottom: 0.5rem;
-}
-.redesSociais ul li a {
-  text-decoration: none;
-  color: #3246d3;
-  padding: .5rem 2rem;
-  border: 2px solid #3246d3;
-  border-radius: .3rem;
-}
-.redesSociais ul li a:hover {
-  background-color: #3246d3;
-  color: #ffffff;
-}
-
-.apresentacao {
-  line-height: 2rem;
-  color: #3246d3;
-}
-
-@media(min-width: 960px) {
-  .container {
-    width: 960px;
-    margin: 0 auto;
-  }
-  .cabecalho {
-    display: flex;
-    margin-top: 5rem;
-  }
-  header {
-    flex-grow: 1;
-  }
-  .cabecalho__titulo {
-    font-size: 5rem;
-  }
-  .cabecalho__subtitulo {
-    margin-top: .5rem;
-    margin-bottom: 3rem;
-  }
-  .redesSociais {
-    border: none;
-    margin: 0;
-  }
-  .redesSociais ul {
-    display: block;
-    width: 100%;
-  }
-  .redesSociais ul li {
-    width: auto;
-    border: none;
-    margin-bottom: 0.5rem;
-  }
-  .redesSociais ul li a {
-    width: auto;
-    display: block;
-    border: 2px solid #3246d3;
-    margin: 0;
-  }
-
-  .apresentacao {
-    font-size: 1.3em;
-    line-height: 2.1em;
-  }
 }
