@@ -31,6 +31,7 @@ main {
 .social-lista {
   margin-top: 10px;
   margin-bottom: 10px;
+  justify-content: space-between;
 }
 
 .social-lista-item a img {
