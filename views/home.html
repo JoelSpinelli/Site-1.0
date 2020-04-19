@@ -7,23 +7,32 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Joel Spinelli</title>
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
-    <div class="cabecalho">
-      <header>
+    <div class="cabecalho flex-grid">
+      <header class="grid-6">
         <h1 class="cabecalho-titulo">Joel Spinelli</h1>
-        <h2 class="cabecalho-subtitulo"><i>Engenheiro - desenvolvedor Node - Front-end</i></h2>
+        <h2 class="cabecalho-subtitulo"><i>Engenheiro - Desenvolvedor Node - Front-end</i></h2>
       </header>
-      <section class="social">
-        <ul class="social-lista">
-          <li><a class="" href="https://linkedin.com/in/joelspinelli" target="_blank"><img src="img/linkedin.svg" alt="linkedin.com/in/joelspinelli" width=50px height="50px" ></a></li>
-          <li><a class="" href="https://github.com/JoelSpinelli" target="_blank"><img src="img/github.svg" alt="github.com/JoelSpinelli" width=50px height="50px" ></a></li>
-          <li><a class="" href="https://twitter.com/joelspinelli" target="_blank"><img src="img/twitter.svg" alt="twitter.com/joelspinelli" width=50px height="50px" ></a></li>
+      <section class="social grid-10">
+        <ul class="social-lista flex-grid">
+          <li class="social-lista-item mobile-1"><a class="social-lista-item__linkedin" href="https://linkedin.com/in/joelspinelli" target="_blank"><img src="img/linkedin.svg" alt="linkedin.com/in/joelspinelli"></a></li>
+          <li class="social-lista-item mobile-1"><a class="social-lista-item__github" href="https://github.com/JoelSpinelli" target="_blank"><img src="img/github.svg" alt="github.com/JoelSpinelli"></a></li>
+          <li class="social-lista-item mobile-1"><a class="social-lista-item__twitter" href="https://twitter.com/joelspinelli" target="_blank"><img src="img/twitter.svg" alt="twitter.com/joelspinelli"></a></li>
         </ul>
       </section>
     </div>
+    <main class="menu grid-16">
+      <ul class="flex-grid">
+        <li class="grid-4">Blog</li>
+        <li class="grid-4">Sobre</li>
+        <li class="grid-4">Curriculo</li>
+        <li class="grid-4">Contato</li>
+      </ul>
+    </main>
   </div>
 </body>
 
