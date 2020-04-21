@@ -35,8 +35,8 @@ main {
 }
 
 .social-lista-item a img {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
 }
 
 .social-lista-item:nth-child(2)  {
@@ -55,33 +55,59 @@ main {
 
 @media(min-width: 960px) {
   .container {
-    width: 960px;
+    width: 90vw;
     margin: 0 auto;
   }
 
-  .menu {
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-    padding: 2px 0;
+  .cabecalho, .menu, .social {
+    height: calc(3.75rem + 20px);
   }
 
-  .menu ul {
-    background-color: #000000;
-    padding: 2.5px 0;
-    color: #ffffff;
-    text-transform: uppercase;
+  .cabecalho {
+    margin-top: 2rem;
   }
+
+  header {
+    height: 100%;
+  }
+
+  .cabecalho-titulo, .cabecalho-subtitulo {
+    text-align: left;
+  }
+
+  main {
+    display: block;
+  }
+
+  .menu-list {
+    padding: 2.5px 0;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    height: 100%;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .menu ul li {
+    font-size: .85rem;
+  }
+
   .menu ul li:hover {
-    background-color: #ffffff;
-    color: #000000;
+    color: #ff7f16;
     cursor: pointer;
   }
 
-  .menu li {
-    text-align: center;
+  .social-lista {
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+    height: 100%;
   }
 
-  .social-lista {
-    justify-content: flex-end;
+  .social-lista li a {
+    color: green;
   }
 }
