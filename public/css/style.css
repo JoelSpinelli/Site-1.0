@@ -9,6 +9,8 @@ body {
   padding: 2rem;
   display: grid;
   place-items: center;
+  background-color: #FFEDDE;
+  color: #060606
 }
 
 h1 {
