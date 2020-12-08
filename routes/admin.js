@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-const publicIp = require('public-ip');
 
 const rootDir = require('../util/path');
 
@@ -10,8 +9,11 @@ router.get('/', (req, res) => {
   res.sendFile(path.join(rootDir, 'views', 'home.html'));
 });
 
-router.get('/ip', async (req, res) => {
-  res.json({ip: await publicIp.v6()});
+router.get('/ip', (req, res) => {
+  res.json({ip: ( (req.headers['x-forwarded-for'] || '').split(',').pop().trim() ||
+         req.connection.remoteAddress ||
+         req.socket.remoteAddress ||
+         req.connection.socket.remoteAddress )});
 })
 
 exports.routes = router;

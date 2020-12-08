@@ -17,8 +17,7 @@
   },
   "homepage": "https://github.com/JoelSpinelli/Site-1.0#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "public-ip": "^4.0.3"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "nodemon": "^1.19.2"
