@@ -13,11 +13,11 @@ router.get('/', (req, res) => {
   // res.sendFile(path.join(rootDir, 'views', 'home.html'));
 });
 
-
+// const ip_info = get_ip(req, )
 
 router.get('/ip', (req, res) => {
   res.json( {
-    ip: ip(req)
+    ip: ip(req, right_most_proxy=True)
     // ip: (req.headers['x-forwarded-for'] || '').split(',').pop().trim() || ( req.connection.remoteAddress ||
     //         req.socket.remoteAddress ||
     //         req.connection.socket.remoteAddress),
