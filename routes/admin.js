@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const requestIp = require('request-ip');
+
 
 const rootDir = require('../util/path');
 const http = require('http');
@@ -12,12 +12,13 @@ router.get('/', (req, res) => {
   // res.sendFile(path.join(rootDir, 'views', 'home.html'));
 });
 
+
+
 router.get('/ip', (req, res) => {
   res.json(
     {ip: (req.headers['x-forwarded-for'] || '').split(',').pop().trim() || ( req.connection.remoteAddress ||
             req.socket.remoteAddress ||
-            req.connection.socket.remoteAddress),
-    teste: requestIp(req)
+            req.connection.socket.remoteAddress)
     });
 })
 

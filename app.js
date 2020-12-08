@@ -6,6 +6,7 @@ const port = process.env.PORT_APP || 3000;
 const app = express();
 
 app.set('views', 'views');
+app.set('trust proxy', '8.8.8.8');
 
 const adminData = require('./routes/admin');
 
