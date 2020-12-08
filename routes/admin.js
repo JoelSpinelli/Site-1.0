@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/ip', (req, res) => {
-  res.json({ip: (  req.connection )});
+  res.json({ip: req.connection});
 })
 
 exports.routes = router;
