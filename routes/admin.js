@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-const ipRegex = require('ip-regex');
 
 const rootDir = require('../util/path');
 const http = require('http');
@@ -20,8 +19,7 @@ router.get('/ip', (req, res) => {
             req.socket.remoteAddress ||
             req.connection.socket.remoteAddress),
     family: req.socket.remoteFamily,
-    socketAddress: req.socket.remoteAddress,
-    isIP: ipRegex({exact: true}).test((req.headers['x-forwarded-for'] || '').split(',').pop().trim())
+    socketAddress: req.socket.remoteAddress
     });
 })
 
