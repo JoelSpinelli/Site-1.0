@@ -16,8 +16,7 @@ router.get('/ip', (req, res) => {
   res.json({ip: (req.headers['x-forwarded-for'] || '').split(',').pop().trim() || ( req.connection.remoteAddress ||
          req.socket.remoteAddress ||
          req.connection.socket.remoteAddress ),
-        iplib: requestIp.getClientIp(req),
-        ipreal: req.headers['x-real-ip'] || 0
+        iplib: requestIp.getClientIp(req)
       });
 })
 
