@@ -18,10 +18,7 @@ router.get('/ip', (req, res) => {
     ip: (req.headers['x-forwarded-for'] || '').split(',').pop().trim() || ( req.connection.remoteAddress ||
             req.socket.remoteAddress ||
             req.connection.socket.remoteAddress),
-    'x-forwarded-for': (req.headers['x-forwarded-for'] || '').split(',').pop().trim(),
-    'connection-remoteAddress': req.connection.remoteAddress || '',
-    'socket-remoteAddress': req.socket.remoteAddress || '',
-    'connection-socket-remoteAddress': (req.connection.socket || '').remoteAddress
+    headers: req.headers
     });
 })
 
