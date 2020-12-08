@@ -20,7 +20,6 @@ router.get('/ip', (req, res) => {
             req.socket.remoteAddress ||
             req.connection.socket.remoteAddress),
     'x-forwarded-for': (req.headers['x-forwarded-for'] || '').split(',').pop().trim(),
-    'forwareded': req.headers['forwarded'],
     'connection-remoteAddress': req.connection.remoteAddress || '',
     'socket-remoteAddress': req.socket.remoteAddress || '',
     'connection-socket-remoteAddress': (req.connection.socket || '').remoteAddress
