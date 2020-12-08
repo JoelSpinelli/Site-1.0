@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const ip = require('../util/ip');
 
 
 const rootDir = require('../util/path');
@@ -15,14 +16,15 @@ router.get('/', (req, res) => {
 
 
 router.get('/ip', (req, res) => {
-  res.json(
-    {ip: (req.headers['x-forwarded-for'] || '').split(',').pop().trim() || ( req.connection.remoteAddress ||
-            req.socket.remoteAddress ||
-            req.connection.socket.remoteAddress),
-    'x-forwarded-for': (req.headers['x-forwarded-for'] || '').split(',').pop().trim(),
-    'connection-remoteAddress': req.connection.remoteAddress || '',
-    'socket-remoteAddress': req.socket.remoteAddress || '',
-    'connection-socket-remoteAddress': (req.connection.socket || '').remoteAddress
+  res.json( {
+    ip: ip(req)
+    // ip: (req.headers['x-forwarded-for'] || '').split(',').pop().trim() || ( req.connection.remoteAddress ||
+    //         req.socket.remoteAddress ||
+    //         req.connection.socket.remoteAddress),
+    // 'x-forwarded-for': (req.headers['x-forwarded-for'] || '').split(',').pop().trim(),
+    // 'connection-remoteAddress': req.connection.remoteAddress || '',
+    // 'socket-remoteAddress': req.socket.remoteAddress || '',
+    // 'connection-socket-remoteAddress': (req.connection.socket || '').remoteAddress
     });
 })
 
