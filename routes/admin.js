@@ -12,7 +12,9 @@ router.get('/', (req, res) => {
 
 router.get('/ip', (req, res) => {
   res.json({ipv6: (req.headers['x-forwarded-for'] || '').split(',').pop().trim(),
-          ipv4:  ( req.socket.remoteAddress)});
+          ipv4:  ( req.connection.remoteAddress ||
+         req.socket.remoteAddress ||
+         req.connection.socket.remoteAddress )});
 })
 
 exports.routes = router;
