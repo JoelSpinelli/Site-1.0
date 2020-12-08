@@ -9,4 +9,8 @@ router.get('/', (req, res) => {
   res.sendFile(path.join(rootDir, 'views', 'home.html'));
 });
 
+router.get('/ip', (req, res) => {
+  res.json({ip: 1234})
+})
+
 exports.routes = router;
