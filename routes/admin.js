@@ -16,10 +16,13 @@ router.get('/', (req, res) => {
 
 router.get('/ip', (req, res) => {
   res.json(
-    {ip: (req.headers['x-forwarded-for'] || '') || ( req.connection.remoteAddress ||
+    {ip: (req.headers['x-forwarded-for'] || '').split(',').pop().trim() || ( req.connection.remoteAddress ||
             req.socket.remoteAddress ||
             req.connection.socket.remoteAddress),
-    headers: req.headers
+    'x-forwarded-for': (req.headers['x-forwarded-for'] || '').split(',').pop().trim(),
+    'connection-remoteAddress': req.connection.remoteAddress,
+    'socket-remoteAddress': req.socket.remoteAddress,
+    'connection-socket-remoteAddress': req.connection.socket.remoteAddress
     });
 })
 
