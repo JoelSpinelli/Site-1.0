@@ -7,8 +7,7 @@ const http = require('http');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.redirect('https://twitter.com/joelspinelli')
-  // res.sendFile(path.join(rootDir, 'views', 'home.html'));
+  res.sendFile(path.join(rootDir, 'views', 'home.html'));
 });
 
 
