@@ -17,7 +17,7 @@ router.get('/ip', (req, res) => {
          req.socket.remoteAddress ||
          req.connection.socket.remoteAddress ),
         iplib: requestIp.getClientIp(req),
-        ipreal: req.headers['x-real-ip']
+        ipreal: req.headers['x-real-ip'] || 0
       });
 })
 
